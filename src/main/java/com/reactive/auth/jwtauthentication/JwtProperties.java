@@ -1,6 +1,5 @@
 package com.reactive.auth.jwtauthentication;
 
-import com.fasterxml.jackson.databind.deser.std.UUIDDeserializer;
 import lombok.Data;
 import org.springframework.context.annotation.Configuration;
 
