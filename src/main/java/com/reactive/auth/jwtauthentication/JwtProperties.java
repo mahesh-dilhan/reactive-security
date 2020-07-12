@@ -8,7 +8,7 @@ import java.util.UUID;
 @Configuration
 @Data
 public class JwtProperties {
-    //private String secretKey = "rzxlszyykpbgqcflzxsqcysyhljt";
+    //secret key
     private String secretKey = UUID.randomUUID().toString();
     //validity in milliseconds
     private long validityInMs = 3600000; // 1h

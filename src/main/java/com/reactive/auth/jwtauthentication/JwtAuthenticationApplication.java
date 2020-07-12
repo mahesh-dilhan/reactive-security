@@ -60,13 +60,13 @@ public class JwtAuthenticationApplication {
 				/**********************************
 				 * BASIC - Allow All Traffic	  *
 				 **********************************/
-//				.httpBasic()
-//				.securityContextRepository(NoOpServerSecurityContextRepository.getInstance())
-//				.and()
-//				.authorizeExchange()
-//				.anyExchange().permitAll()
-//				.and()
-//				.build();
+				.httpBasic()
+				.securityContextRepository(NoOpServerSecurityContextRepository.getInstance())
+				.and()
+				.authorizeExchange()
+				.anyExchange().permitAll()
+				.and()
+				.build();
 
 				/*******************************************
 				 * BASIC - Apply Security for             *
@@ -89,14 +89,14 @@ public class JwtAuthenticationApplication {
 				 * path -person, and restric greet/       *
 				 *******************************************/
 
-				.httpBasic(it -> it.disable())
-				.securityContextRepository(NoOpServerSecurityContextRepository.getInstance())
-				.authorizeExchange(it -> it
-						.pathMatchers("/auth/token").permitAll()
-						.anyExchange().authenticated()
-				)
-				.addFilterAt(new JwtTokenAuthenticationFilter(tokenProvider), SecurityWebFiltersOrder.HTTP_BASIC)
-				.build();
+//				.httpBasic(it -> it.disable())
+//				.securityContextRepository(NoOpServerSecurityContextRepository.getInstance())
+//				.authorizeExchange(it -> it
+//						.pathMatchers("/auth/token").permitAll()
+//						.anyExchange().authenticated()
+//				)
+//				.addFilterAt(new JwtTokenAuthenticationFilter(tokenProvider), SecurityWebFiltersOrder.HTTP_BASIC)
+//				.build();
 	}
 
 
