@@ -2,7 +2,6 @@
 Security + Reactive + JWT 
 
 
-# Kafka Consumer
 Examples in this repo:
 
  * Basic Spring Security
